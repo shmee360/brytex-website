@@ -1,0 +1,23 @@
+---
+layout: default
+title: Brytex Building Systems
+images:
+    - ….jpg
+    - Album -2.jpg
+    - Album -3.jpg
+---
+<!-- currently working on this tutorial: -->
+<!-- https://www.zachleat.com/web/eleventy-tutorial-level-2/ -->
+<!-- most of the site comes from this tutorial: -->
+<!-- https://stevepolito.design/blog/create-a-bootstrap-starter-theme-in-eleventy/ -->
+
+<h1 id="pageTitle">{{ title }}</h1>
+<ul>
+{%- for filename in images %}
+ {%- capture path %}img/{{ filename }}{% endcapture %}
+ <li>
+  <a href="img/{{ filename | url_encode }}">{{ filename }}</a>
+  {{ path | filesize }}
+ </li>
+{% endfor %}
+</ul>
