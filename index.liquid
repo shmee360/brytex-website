@@ -5,19 +5,48 @@ images:
     - ….jpg
     - Album -2.jpg
     - Album -3.jpg
+test_img: wire_rope.jpg
 ---
-<!-- currently working on this tutorial: -->
-<!-- https://www.zachleat.com/web/eleventy-tutorial-level-2/ -->
-<!-- most of the site comes from this tutorial: -->
-<!-- https://stevepolito.design/blog/create-a-bootstrap-starter-theme-in-eleventy/ -->
 
-<h1 id="pageTitle">{{ title }}</h1>
-<ul>
-{%- for filename in images %}
- {%- capture path %}img/{{ filename }}{% endcapture %}
- <li>
-  <a href="img/{{ filename | url_encode }}">{{ filename }}</a>
-  {{ path | filesize }}
- </li>
-{% endfor %}
-</ul>
+{% comment %}
+currently working on this tutorial:
+https://www.zachleat.com/web/eleventy-tutorial-level-2/
+most of the site comes from this tutorial:
+https://stevepolito.design/blog/create-a-bootstrap-starter-theme-in-eleventy/
+{% endcomment %}
+
+{% comment %}
+strangely, I couldn't get this to work on the stylesheet
+{% endcomment %}
+{%- assign img_style = "
+height: 100vh;
+max-width: none;
+left: 50%;
+position: relative;
+transform: translateX(-50%);
+-webkit-transform: translateX(-50%);
+" -%}
+
+<div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+    {%- for i in images %}
+        {%- capture path %}img/{{ i }}{% endcapture %}
+        {%- if forloop.first == true -%}
+        <div class="carousel-item active">
+        {%- else -%}
+        <div class="carousel-item">
+        {%- endif %}
+        <img style="{{ img_style }}" src="{{ path }}" alt="{{ i }}">
+        </div>
+    {% endfor %}
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
