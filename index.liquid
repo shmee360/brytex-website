@@ -2,10 +2,7 @@
 layout: default
 title: Brytex Building Systems
 images:
-    - ….jpg
-    - Album -2.jpg
-    - Album -3.jpg
-test_img: wire_rope.jpg
+    - natco.jpg
 ---
 
 {% comment %}
@@ -15,19 +12,19 @@ most of the site comes from this tutorial:
 https://stevepolito.design/blog/create-a-bootstrap-starter-theme-in-eleventy/
 {% endcomment %}
 
-{% comment %}
-strangely, I couldn't get this to work on the stylesheet
-{% endcomment %}
-{%- assign img_style = "
-height: 100vh;
-max-width: none;
-left: 50%;
-position: relative;
-transform: translateX(-50%);
--webkit-transform: translateX(-50%);
-" -%}
+<div id="buildingCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+    {%- for _ in images %}
+        <button type="button" data-bs-target="#buildingCarousel"
+            data-bs-slide-to="{{ forloop.index0 }}"
+        {%- if forloop.first == true %}
+            class="active" aria-current="true"
+        {%- endif %}
+            aria-label="Slide{{forloop.index}}"
+        ></button>
+    {% endfor %}
+    </div>
 
-<div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
     {%- for i in images %}
         {%- capture path %}img/{{ i }}{% endcapture %}
@@ -36,16 +33,18 @@ transform: translateX(-50%);
         {%- else -%}
         <div class="carousel-item">
         {%- endif %}
-        <img style="{{ img_style }}" src="{{ path }}" alt="{{ i }}">
+        <img src="{{ path }}" alt="{{ i }}">
         </div>
     {% endfor %}
     </div>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button"
+        data-bs-target="#buildingCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <button class="carousel-control-next" type="button"
+        data-bs-target="#buildingCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>

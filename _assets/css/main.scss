@@ -1,28 +1,35 @@
-@import './vendor/bootstrap';
+@import "./../../node_modules/bootstrap/scss/bootstrap.scss";
 
-.imgbox {
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+$smallDrop: drop-shadow(2px 2px 0px rgb(0 0 0 / 75%));
+$navHeight: 64px;
 
 .carousel {
-    height: 100vh;
+    height: calc(100vh - $navHeight);
     width: 100%;
+
+    .carousel-indicators {
+        button {
+            filter: $smallDrop;
+        }
+    }
+
     .carousel-inner {
+        height: 100%;
+        width: 100%;
+
         .carousel-item {
+            height: 100%;
+            width: 100%;
             overflow: hidden;
-            img {
-                height: 100vh;
-                max-width: none;
-                left: 50%;
-                position: relative;
-                transform: translateX(-50%);
-                -webkit-transform: translateX(-50%);
-            }
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            filter: $smallDrop;
         }
     }
 }
