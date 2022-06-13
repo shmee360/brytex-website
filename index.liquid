@@ -1,8 +1,9 @@
 ---
 layout: default
-title: Brytex Building Systems
 images:
     - natco.jpg
+    - peco.jpg
+    - cover_1.jpg
 ---
 
 {% comment %}
@@ -11,6 +12,19 @@ https://www.zachleat.com/web/eleventy-tutorial-level-2/
 most of the site comes from this tutorial:
 https://stevepolito.design/blog/create-a-bootstrap-starter-theme-in-eleventy/
 {% endcomment %}
+
+<nav class="nav justify-content-center align-items-center">
+    <a class="nav-link active" aria-current="page" href="#top">HOME</a>
+    <a class="nav-link" href="#about">ABOUT BRYTEX</a>
+    <a class="nav-link" href="#services">SERVICES</a>
+    <a class="nav-link" href="#products">PRODUCTS</a>
+    <a class="nav-link" href="">
+        <img src="{{ site.logo }}" alt="Brytex Logo">
+    </a>
+    <a class="nav-link" href="#colours">COLOUR CHART</a>
+    <a class="nav-link" href="#gallery">PHOTO GALLERY</a>
+    <a class="nav-link" href="#contact" tabindex="-1">CONTACT</a>
+</nav>
 
 <div id="buildingCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -49,3 +63,85 @@ https://stevepolito.design/blog/create-a-bootstrap-starter-theme-in-eleventy/
         <span class="visually-hidden">Next</span>
     </button>
 </div>
+
+<section id="about">
+    <div class="content">
+        <h1>ABOUT BRYTEX</h1>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex magna,
+            accumsan sed venenatis eu, tincidunt non libero. Aliquam erat volutpat.
+            Morbi tortor libero, sagittis sit amet augue in, porta aliquet ligula.
+            Curabitur lacinia est eget mauris iaculis blandit. Praesent sollicitudin
+            dictum sodales. Ut purus magna, egestas eget ante nec, faucibus
+            sollicitudin lorem. Morbi feugiat eget ipsum faucibus tempus. Interdum et
+            malesuada fames ac ante ipsum primis in faucibus. Proin metus nulla,
+            imperdiet sit amet fermentum id, rhoncus ac augue. Mauris eget feugiat
+            justo. Duis fermentum libero eget iaculis elementum.
+        </p>
+    </div>
+</section>
+
+<p id="services">
+    Pellentesque ac ligula elementum, congue nulla quis, bibendum erat. Integer
+    tellus nibh, auctor vel mollis eu, pharetra vitae orci. Nullam porttitor
+    justo libero, id mattis ligula commodo vitae. Etiam sagittis tortor ut ex
+    gravida, eget sollicitudin ipsum varius. Donec non lacinia velit. Praesent
+    ut est sed ante faucibus sodales nec eget lorem. Donec quis metus vel sem
+    maximus consectetur. In et efficitur est, vel sagittis urna. Duis posuere
+    congue porttitor. Maecenas suscipit blandit blandit.
+</p>
+
+<p id="products">
+    Mauris a fringilla purus. Praesent ullamcorper est ac velit vehicula, id
+    sodales odio elementum. Fusce ut tincidunt dolor. Vivamus elementum mi eget
+    auctor scelerisque. Nullam ac viverra sem. Maecenas pharetra et velit eu
+    suscipit. Sed sit amet laoreet augue. Cras cursus ex nec suscipit cursus.
+    Phasellus ullamcorper tempor ex, ut aliquam sapien bibendum sed. Orci
+    varius natoque penatibus et magnis dis parturient montes, nascetur
+    ridiculus mus. Donec eget lectus sed arcu gravida mattis vitae eget est.
+    Duis dui lorem, varius vitae viverra ultrices, porta eget est. Vestibulum
+    accumsan ligula neque, id semper tellus varius vitae. Integer ut dolor
+    risus. Aenean tempus, mi in mattis ultricies, nisl ex aliquam elit, sed
+    fringilla mauris sem vitae ligula.
+</p>
+
+<p id="colours">
+    Morbius faucibus finibus mauris, in ultrices elit lobortis at. Maecenas vel
+    justo at nisi dictum luctus id eu erat. Nulla vel ex dui. Integer auctor
+    tincidunt metus, vitae dictum magna scelerisque at. Morbi gravida metus et
+    lacus suscipit, nec posuere sapien eleifend. Phasellus iaculis turpis et
+    risus varius, in egestas odio molestie. Suspendisse in arcu vitae augue
+    condimentum venenatis at posuere metus. Nunc ullamcorper libero ultricies,
+    imperdiet est sed, vestibulum turpis. Fusce eu risus sit amet mi interdum
+    egestas at ut justo. Nulla varius ante nec lacus tincidunt elementum. Duis
+    at semper lorem. Integer pharetra sem vitae finibus ullamcorper. Curabitur
+    rutrum dolor sit amet lacus iaculis, eget sodales mi dapibus. Duis rutrum
+    elit at augue molestie, malesuada vestibulum augue pulvinar. Etiam
+    pulvinar, turpis eget imperdiet vehicula, quam mauris hendrerit massa, vel
+    viverra leo velit eu purus.
+</p>
+
+<p id="gallery">
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+    cubilia curae; Integer vulputate commodo massa id volutpat. Suspendisse
+    potenti. Donec vitae nisi nunc. Donec ut ante tincidunt dolor venenatis
+    semper eget vitae est. Quisque risus urna, bibendum vitae diam eget,
+    feugiat finibus lorem. Vivamus tincidunt aliquet neque sit amet interdum.
+    Mauris vitae tempor nisi, at lobortis est. Praesent et posuere risus. Donec
+    non dui dolor. Ut quis ullamcorper quam.
+</p>
+
+<p id="contact">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex magna,
+    accumsan sed venenatis eu, tincidunt non libero. Aliquam erat volutpat.
+    Morbi tortor libero, sagittis sit amet augue in, porta aliquet ligula.
+    Curabitur lacinia est eget mauris iaculis blandit. Praesent sollicitudin
+    dictum sodales. Ut purus magna, egestas eget ante nec, faucibus
+    sollicitudin lorem. Morbi feugiat eget ipsum faucibus tempus. Interdum et
+    malesuada fames ac ante ipsum primis in faucibus. Proin metus nulla,
+    imperdiet sit amet fermentum id, rhoncus ac augue. Mauris eget feugiat
+    justo. Duis fermentum libero eget iaculis elementum.
+</p>
+
+<div id="finisher"></div>
