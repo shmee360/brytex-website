@@ -4,6 +4,10 @@
 	<img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex_1.jpg">
 	<br/>
 	<img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex_2.jpg">
+	<br/>
+	<img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex3.jpg">
+	<br/>
+	<img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex4.jpg">
 </div>
 
 Brytex is the market leading steel building supplier in Western Canada. Various

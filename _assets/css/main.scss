@@ -5,6 +5,7 @@
 
 $smallDrop: drop-shadow(2px 2px 0px rgb(0 0 0 / 75%));
 $navHeight: 4rem;
+$imgWidth: 450px;
 
 .carousel {
     height: calc(100vh - $navHeight);
@@ -42,7 +43,7 @@ $navHeight: 4rem;
     background-color: var(--bs-body-bg);
     font-weight: bold;
     box-shadow: 0 -5px 20px -5px rgb(0 0 0 / 50%);
-    z-index: 1000;
+    z-index: $zindex-sticky;
 
     * {
         padding: 0 1.25rem;
@@ -69,7 +70,7 @@ section {
 }
 
 .content {
-    margin: 0 4rem;
+    // margin: 0 4rem;
     padding: 3.75rem 1.25rem;
     overflow: hidden;
     width: 73.75rem;
@@ -99,6 +100,17 @@ section {
 
     div {
         overflow: hidden;
+        margin: auto;
+    }
+
+    ul {
+        li::marker {
+            content: "»" !important;
+            font-size: 1.2rem;
+            color: $primary;
+        }
+
+        li { padding-left: 1rem; }
     }
 
     .right-pics {
@@ -112,9 +124,12 @@ section {
     }
 
     .right-pics, .left-pics {
-        width: 500px;
+        width: $imgWidth;
         height: 100%;
         img:not(:last-child) { margin-bottom: 1.25rem; }
+        overflow: visible;
+
+        img { max-width: $imgWidth; }
     }
 }
 

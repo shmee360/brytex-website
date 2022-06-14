@@ -1,9 +1,9 @@
 # SERVICES
 
 <div class="left-pics">
-	<img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex_1.jpg">
+	<img src="http://brytex.com/wp-content/uploads/2015/10/5.jpg">
 	<br/>
-	<img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex_2.jpg">
+	<img src="http://brytex.com/wp-content/uploads/2016/02/services.jpg">
 </div>
 
 Brytex’s engineers and drafting department ensure that all designs comply with

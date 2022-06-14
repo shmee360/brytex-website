@@ -1,7 +1,7 @@
 # PRODUCTS
 <div>
 <div class="left-pics">
-    <img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex_1.jpg">
+    <img src="http://brytex.com/wp-content/uploads/2016/01/Products_RigidFrameBuildings.jpg">
     <br/>
 </div>
 
@@ -31,7 +31,7 @@ alternative to the tapered.
 
 <div>
 <div class="left-pics">
-    <img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex_2.jpg">
+    <img src="http://brytex.com/wp-content/uploads/2016/01/Products_ModularBuildings.jpg">
     <br/>
 </div>
 
@@ -52,6 +52,7 @@ have included sophisticated electrical and HVAC systems.
 <div>
 <div class="left-pics">
     <img src="http://brytex.com/wp-content/uploads/2016/02/brytex-011-edited.jpg">
+    <br/>
 </div>
 
 <div>
@@ -70,10 +71,33 @@ steel bracing providing maximum space.
 </div>
 </div>
 
-<div style="width: 50%;">
+<div>
+<div class="left-pics">
+    <img src="http://brytex.com/wp-content/uploads/2016/01/Products_CustomFabrication.jpg">
+    <br/>
+</div>
+
+<div>
+
+##### CUSTOM FABRICATION
+<hr/>
+
+Brytex Building Systems is an extremely flexible company with capabilities
+providing a wide range of portable custom structures. Brytex has the design
+experience and expertise to provide structures to meet customers’ particular
+equipment needs. This includes, but is not limited to, custom-built structural
+bases, electrical, mechanical, heating/ventilation systems and interior
+finishes.
+</div>
+</div>
+
+<div>
+<div class="left-pics">&nbsp;</div>
+
+<div>
 
 ###### OUR PAST PROJECTS IN PORTABLE UNITS INCLUDES, BUT IS NOT LIMITED TO:
-<hr/>
+<hr style="width: 3em;"/>
 
 - Electrical Switchgear Houses
 - Generator Modules
@@ -86,5 +110,5 @@ steel bracing providing maximum space.
 - Operators Cabins
 - Process Buildings
 - Modular Structures
-
+</div>
 </div>
