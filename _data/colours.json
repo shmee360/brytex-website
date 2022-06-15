@@ -1,0 +1,89 @@
+[
+    {
+        "name": "Standard",
+        "series": 8000,
+        "items": [
+            {
+                "name": "Bone White",
+                "code": "QC 8273",
+                "colour": "#BEC8C0"
+            },
+            {
+                "name": "White White",
+                "code": "QC 8317",
+                "colour": "#D4D8D7"
+            },
+            {
+                "name": "Stone Grey",
+                "code": "QC 8305",
+                "colour": "#98A297"
+            },
+            {
+                "name": "Slate Blue",
+                "code": "QC 8260",
+                "colour": "#2B6772"
+            },
+            {
+                "name": "Tan",
+                "code": "QC 8315",
+                "colour": "#898B63"
+            },
+            {
+                "name": "Dark Brown",
+                "code": "QC 8315",
+                "colour": "#101A12"
+            }
+        ]
+    },
+    {
+        "name": "Contemporary",
+        "series": 8000,
+        "items": [
+            {
+                "name": "Bright Red",
+                "code": "QC 8386",
+                "colour": "#911515"
+            },
+            {
+                "name": "Royal Blue",
+                "code": "QC 8790",
+                "colour": "#004191"
+            },
+            {
+                "name": "Pacific Turquoise",
+                "code": "QC 8258",
+                "colour": "#1F8B71"
+            },
+            {
+                "name": "Tile Red",
+                "code": "QC 8259",
+                "colour": "#661500"
+            },
+            {
+                "name": "Heron Blue",
+                "code": "QC 8330",
+                "colour": "#003352"
+            },
+            {
+                "name": "Melchers Green",
+                "code": "QC 8307",
+                "colour": "#043518"
+            },
+            {
+                "name": "Gold",
+                "code": "QC 8276",
+                "colour": "#B3AA5D"
+            },
+            {
+                "name": "Regent Grey",
+                "code": "QC 8730",
+                "colour": "#969F9C"
+            },
+            {
+                "name": "Coffee Brown",
+                "code": "QC 8326",
+                "colour": "#1C2814"
+            }
+        ]
+    }
+]

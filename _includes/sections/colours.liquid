@@ -1,0 +1,28 @@
+<h1>COLOUR CHART</h1>
+
+{%- for c in colours -%}
+    <h5>{{ c.name | upcase }} COLOURS &ndash; {{ c.series }} SERIES</h5>
+    <hr class="smallHr"/>
+
+    <div class="colourGrid">
+        {%- for i in c.items -%}
+            <div>
+                <div style="background-color: {{- i.colour -}};"></div>
+                <p>{{ i.name | upcase }} &ndash; {{ i.code }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endfor %}
+
+<ul style="width: 65%; margin: auto;">
+    <li>Colours shown are printed approximations of actual painted product and
+        may vary slightly, you are advised to obtain actual samples for
+        specific colour matches.</li>
+    <li>Additional Charges may apply to Contemporary Colours.</li>
+    <li>Colours shown on this chart are subject to change without notice.</li>
+    <li>Please check Colour & Gauge availability with your Brytex Building
+        Systems Inc. Representative. Other special order colours are
+        available.</li>
+    <li>For more technical paint coating and colour information please contact
+        Brytex Building Systems Inc..</li>
+</ul>

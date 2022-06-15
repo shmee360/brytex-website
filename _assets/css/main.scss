@@ -106,7 +106,7 @@ section {
     ul {
         li::marker {
             content: "»" !important;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             color: $primary;
         }
 
@@ -133,21 +133,48 @@ section {
     }
 }
 
-.wrap-green {
-    background-color: color.change($primary, $alpha: 0.9);
+.wrap-cont {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
 
     .content {
         h1 {
-            background-color: var(--bs-body-bg);
             color: $primary;
+            background-color: var(--bs-body-bg);
         }
 
-        p { color: var(--bs-body-bg); }
+        p, h5, ul { color: var(--bs-body-bg); }
+
+        hr { background-color: var(--bs-body-bg); }
     }
 }
+
+.wrap-green {
+    background-color: color.change($primary, $alpha: 0.9);
+}
+
+.wrap-dark {
+    background-color: color.change(black, $alpha: 0.8);
+}
+
+.colourGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    div {
+        margin: 20px;
+
+        div {
+            height: 128px;
+            width: 300px;
+        }
+
+        p { text-align: center; }
+    }
+}
+
+.smallHr { width: 3rem; }
 
 #finisher { height: $navHeight; }

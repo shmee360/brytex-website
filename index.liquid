@@ -73,7 +73,7 @@ https://stevepolito.design/blog/create-a-bootstrap-starter-theme-in-eleventy/
 <section id="services"
          class="parallax"
          style="background-image: url('http://brytex.com/wp-content/uploads/2015/06/P0001965.jpg');">
-    <div class="wrap-green">
+    <div class="wrap-cont wrap-green">
         <div class="content">
             {% renderFile "./_includes/sections/services.md" %}
         <div/>
@@ -86,7 +86,27 @@ https://stevepolito.design/blog/create-a-bootstrap-starter-theme-in-eleventy/
     </div>
 </section>
 
-<p id="colours">
+<section id="colours"
+         class="parallax"
+         style="background-image: url('http://brytex.com/wp-content/uploads/2015/10/P0001960-square.jpg');">
+    <div class="wrap-cont wrap-dark">
+        <div class="content">
+            {% render "./_includes/sections/colours.liquid", colours: colours %}
+        <div/>
+    <div/>
+</section>
+
+<p id="gallery">
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+    cubilia curae; Integer vulputate commodo massa id volutpat. Suspendisse
+    potenti. Donec vitae nisi nunc. Donec ut ante tincidunt dolor venenatis
+    semper eget vitae est. Quisque risus urna, bibendum vitae diam eget,
+    feugiat finibus lorem. Vivamus tincidunt aliquet neque sit amet interdum.
+    Mauris vitae tempor nisi, at lobortis est. Praesent et posuere risus. Donec
+    non dui dolor. Ut quis ullamcorper quam.
+</p>
+
+<p id="contact">
     Morbius faucibus finibus mauris, in ultrices elit lobortis at. Maecenas vel
     justo at nisi dictum luctus id eu erat. Nulla vel ex dui. Integer auctor
     tincidunt metus, vitae dictum magna scelerisque at. Morbius gravida metus
@@ -100,28 +120,6 @@ https://stevepolito.design/blog/create-a-bootstrap-starter-theme-in-eleventy/
     elit at augue molestie, malesuada vestibulum augue pulvinar. Etiam
     pulvinar, turpis eget imperdiet vehicula, quam mauris hendrerit massa, vel
     viverra leo velit eu purus.
-</p>
-
-<p id="gallery">
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-    cubilia curae; Integer vulputate commodo massa id volutpat. Suspendisse
-    potenti. Donec vitae nisi nunc. Donec ut ante tincidunt dolor venenatis
-    semper eget vitae est. Quisque risus urna, bibendum vitae diam eget,
-    feugiat finibus lorem. Vivamus tincidunt aliquet neque sit amet interdum.
-    Mauris vitae tempor nisi, at lobortis est. Praesent et posuere risus. Donec
-    non dui dolor. Ut quis ullamcorper quam.
-</p>
-
-<p id="contact">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex magna,
-    accumsan sed venenatis eu, tincidunt non libero. Aliquam erat volutpat.
-    Morbius tortor libero, sagittis sit amet augue in, porta aliquet ligula.
-    Curabitur lacinia est eget mauris iaculis blandit. Praesent sollicitudin
-    dictum sodales. Ut purus magna, egestas eget ante nec, faucibus
-    sollicitudin lorem. Morbius feugiat eget ipsum faucibus tempus. Interdum et
-    malesuada fames ac ante ipsum primis in faucibus. Proin metus nulla,
-    imperdiet sit amet fermentum id, rhoncus ac augue. Mauris eget feugiat
-    justo. Duis fermentum libero eget iaculis elementum.
 </p>
 
 <div id="finisher"></div>

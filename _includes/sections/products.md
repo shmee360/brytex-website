@@ -97,7 +97,7 @@ finishes.
 <div>
 
 ###### OUR PAST PROJECTS IN PORTABLE UNITS INCLUDES, BUT IS NOT LIMITED TO:
-<hr style="width: 3em;"/>
+<hr class="smallHr"/>
 
 - Electrical Switchgear Houses
 - Generator Modules
