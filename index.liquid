@@ -13,18 +13,24 @@ most of the site comes from this tutorial:
 https://stevepolito.design/blog/create-a-bootstrap-starter-theme-in-eleventy/
 {% endcomment %}
 
-<nav class="nav justify-content-center align-items-center">
-    <a class="nav-link active" aria-current="page" href="#top">HOME</a>
+<div class="navwrap">
+<nav class="nav justify-content-center align-items-center" style="width: 30%;">
+    <a class="nav-link" href="#top">HOME</a>
     <a class="nav-link" href="#about">ABOUT BRYTEX</a>
     <a class="nav-link" href="#services">SERVICES</a>
     <a class="nav-link" href="#products">PRODUCTS</a>
-    <a class="nav-link" href="">
+</nav>
+<nav class="nav justify-content-center align-items-center">
+    <a class="nav-link" aria-current="page" href="">
         <img src="{{ site.logo }}" alt="Brytex Logo">
     </a>
+</nav>
+<nav class="nav justify-content-center align-items-center" style="width: 30%;">
     <a class="nav-link" href="#colours">COLOUR CHART</a>
     <a class="nav-link" href="#gallery">PHOTO GALLERY</a>
-    <a class="nav-link" href="#contact" tabindex="-1">CONTACT</a>
+    <a class="nav-link" href="#contact">CONTACT</a>
 </nav>
+</div>
 
 <div id="buildingCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-indicators">

@@ -7,7 +7,7 @@
     <div class="colourGrid">
         {%- for i in c.items -%}
             <div>
-                <div style="background-color: {{- i.colour -}};"></div>
+                <div class="fadein" style="background-color: {{- i.colour -}};"></div>
                 <p>{{ i.name | upcase }} &ndash; {{ i.code }}</p>
             </div>
         {% endfor %}
