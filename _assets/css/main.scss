@@ -73,7 +73,11 @@ section {
     background-size: cover;
 }
 
-.fadein { opacity: 0; }
+.fadein {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 2s, transform 1s;
+}
 
 .content {
     // margin: 0 4rem;
