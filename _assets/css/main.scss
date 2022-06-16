@@ -4,7 +4,7 @@
 @import "./vendor/_bootstrap.scss";
 
 $smallDrop: drop-shadow(2px 2px 0px rgb(0 0 0 / 75%));
-$navHeight: 4rem;
+$navHeight: 4 * $spacer;
 $imgWidth: 450px;
 
 .carousel {
@@ -50,19 +50,25 @@ $imgWidth: 450px;
     .navbar-nav {
         flex-direction: row;
         justify-content: center;
-        width: 30%;
+        min-width: 30%;
     }
 
-    .nav-item { padding: 0 1rem; }
+    .nav-item {
+        padding: 0 $spacer;
+
+        a.nav-link.active {
+            color: $nav-link-hover-color;
+        }
+    }
 
     .navbar-brand {
-        padding: 0 2.5rem;
+        padding: 0 1.25 * $spacer;
     }
 
     img {
         height: $navHeight;
         width: 100%;
-        padding: 0 1rem;
+        padding: 0 $spacer;
     }
 }
 
@@ -87,18 +93,17 @@ section {
 }
 
 .content {
-    // margin: 0 4rem;
-    padding: 3.75rem 1.25rem;
+    padding: 3.75 * $spacer 1.25 * $spacer;
     overflow: hidden;
-    width: 73.75rem;
+    width: 73.75 * $spacer;
 
     h1 {
         text-align: center;
-        margin-bottom: 4rem;
+        margin-bottom: 4 * $spacer;
         font-weight: 800;
         color: var(--bs-body-bg);
         background-color: $primary;
-        padding: 0.63rem;
+        padding: 0.63 * $spacer;
     }
 
     h5 {
@@ -108,10 +113,10 @@ section {
     }
 
     hr {
-        height: 0.2rem;
+        height: 0.2 * $spacer;
         background-color: $primary;
-        margin-top: 0.31rem;
-        margin-bottom: 1rem;
+        margin-top: 0.31 * $spacer;
+        margin-bottom: 1 * $spacer;
         opacity: 1;
     }
 
@@ -123,11 +128,11 @@ section {
     ul {
         li::marker {
             content: "»" !important;
-            font-size: 1.5rem;
+            font-size: 1.5 * $spacer;
             color: $primary;
         }
 
-        li { padding-left: 1rem; }
+        li { padding-left: $spacer; }
     }
 
     .right-pics {
@@ -143,7 +148,7 @@ section {
     .right-pics, .left-pics {
         width: $imgWidth;
         height: 100%;
-        img:not(:last-child) { margin-bottom: 1.25rem; }
+        img:not(:last-child) { margin-bottom: 1.25 * $spacer; }
         overflow: visible;
 
         img {
@@ -197,6 +202,14 @@ section {
     }
 }
 
-.smallHr { width: 3rem; }
+.galleryGrid {
+    flex-direction: column !important;
+    justify-content: start !important;
+    align-items: start !important;
+    width: 100% !important;
+    overflow: hidden !important;
+}
+
+.smallHr { width: 3 * $spacer; }
 
 #finisher { height: $navHeight; }

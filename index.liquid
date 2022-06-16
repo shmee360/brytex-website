@@ -6,17 +6,10 @@ images:
     - cover_1.jpg
 ---
 
-{% comment %}
-currently working on this tutorial:
-https://www.zachleat.com/web/eleventy-tutorial-level-2/
-most of the site comes from this tutorial:
-https://stevepolito.design/blog/create-a-bootstrap-starter-theme-in-eleventy/
-{% endcomment %}
-
-<nav class="nav justify-content-center align-items-center">
+<nav id="navigation" class="nav justify-content-center align-items-center">
     <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-            <a class="nav-link" href="#top">HOME</a>
+            <a class="nav-link active" href="#buildingCarousel">HOME</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#about">ABOUT BRYTEX</a>
@@ -114,9 +107,14 @@ https://stevepolito.design/blog/create-a-bootstrap-starter-theme-in-eleventy/
     <div/>
 </section>
 
-<section id="gallery">
-    <div class="content">
+<section id="gallery" class="flex-column">
+    <div class="content pb-0">
         <h1>PHOTO GALLERY</h1>
+    </div>
+
+    <div class="galleryGrid">
+            <img id="galImg01"
+                 src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex_1.jpg"/>
     </div>
 </section>
 
