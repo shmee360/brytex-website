@@ -6,31 +6,36 @@ images:
     - cover_1.jpg
 ---
 
-{% comment %}
-currently working on this tutorial:
-https://www.zachleat.com/web/eleventy-tutorial-level-2/
-most of the site comes from this tutorial:
-https://stevepolito.design/blog/create-a-bootstrap-starter-theme-in-eleventy/
-{% endcomment %}
-
-<div class="navwrap">
-<nav class="nav justify-content-center align-items-center" aria-current="page" style="min-width: 30%;">
-    <a class="nav-link" href="#top">HOME</a>
-    <a class="nav-link" href="#about">ABOUT BRYTEX</a>
-    <a class="nav-link" href="#services">SERVICES</a>
-    <a class="nav-link" href="#products">PRODUCTS</a>
-</nav>
-<nav class="nav justify-content-center align-items-center">
-    <a class="nav-link" aria-current="page" href="">
-        <img src="{{ site.logo }}" alt="Brytex Logo">
+<nav id="navigation" class="nav justify-content-center align-items-center">
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item" aria-current="true">
+            <a class="nav-link active" href="#buildingCarousel">HOME</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#about">ABOUT BRYTEX</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#services">SERVICES</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#products">PRODUCTS</a>
+        </li>
+    </ul>
+    <a class="navbar-brand" aria-current="page" href="">
+        <img src="{{ site.logo }}" alt="Brytex Logo" style="opacity: 0;">
     </a>
+    <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#colours">COLOUR CHART</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#gallery">PHOTO GALLERY</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#contact">CONTACT</a>
+        </li>
+    </ul>
 </nav>
-<nav class="nav justify-content-center align-items-center" style="min-width: 30%;">
-    <a class="nav-link" href="#colours">COLOUR CHART</a>
-    <a class="nav-link" href="#gallery">PHOTO GALLERY</a>
-    <a class="nav-link" href="#contact">CONTACT</a>
-</nav>
-</div>
 
 <div id="buildingCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -102,10 +107,12 @@ https://stevepolito.design/blog/create-a-bootstrap-starter-theme-in-eleventy/
     <div/>
 </section>
 
-<section id="gallery">
-    <div class="content">
+<section id="gallery" class="flex-column">
+    <div class="content pb-0">
         <h1>PHOTO GALLERY</h1>
     </div>
+
+    {% render "./_includes/sections/gallery.liquid", sec_link: "#gallery" %}
 </section>
 
 <section id="contact"
