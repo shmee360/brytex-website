@@ -207,11 +207,55 @@ section {
 }
 
 .galleryGrid {
-    flex-direction: column !important;
+    flex-flow: row wrap !important;
     justify-content: start !important;
     align-items: start !important;
     width: 100% !important;
     overflow: hidden !important;
+    position: relative;
+}
+
+.galleryItem {
+    width: 25%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    img {
+        width: 100%;
+        transform: translateY(0);
+        transition: transform 0.2s;
+    }
+
+    .projectInfo {
+        transform: translateY($navHeight);
+        transition: transform 225ms;
+        height: $navHeight;
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+        background-color: $primary;
+        color: var(--bs-body-bg);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+    }
+}
+
+.galleryItem:hover {
+    img {
+        transform: translateY($spacer - $navHeight);
+        transition: transform 0.2s;
+    }
+
+    .projectInfo {
+        transform: translateY(0);
+        transition: transform 225ms;
+    }
 }
 
 .smallHr { width: 3 * $spacer; }
