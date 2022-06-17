@@ -8,9 +8,7 @@ const FadeClass = "fadein";
 
 let ticking = false;
 
-window.onload = () => {
-    scrollAnimCls(document, FadeClass, AnimTime, fadeInOne);
-}
+window.onload = () => fadeInAll(document, FadeClass, AnimTime);
 
 document.addEventListener("scroll", e => {
     if (!ticking) {
