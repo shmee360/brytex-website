@@ -9,13 +9,13 @@ const FadeClass = "fadein";
 let ticking = false;
 
 window.onload = () => {
-    fadeInAll(document, FadeClass, AnimTime);
+    scrollAnimCls(document, FadeClass, AnimTime, fadeInOne);
 }
 
 document.addEventListener("scroll", e => {
     if (!ticking) {
         window.requestAnimationFrame(() => {
-            fadeInAll(document, FadeClass, AnimTime);
+            scrollAnimCls(document, FadeClass, AnimTime, fadeInOne);
 
             ticking = false;
         });
@@ -24,22 +24,25 @@ document.addEventListener("scroll", e => {
     }
 });
 
-const fadeInAll = (doc, cls, duration) => {
+const scrollAnimCls = (doc, cls, duration, fn) => {
     let i = 0;
 
     [].forEach.call(doc.getElementsByClassName(cls), el => {
         if (onScreen(el)) {
-            setTimeout(() => {
-                el.style.opacity = 1;
-                el.style.transform = "translateY(0px)";
-
-                // Wait for animation to play before removing class
-                setTimeout(() => {
-                    el.classList.remove(cls);
-                }, duration);
-            }, duration / 12 * i++);
+            setTimeout(() => fn(el, cls, duration),
+                duration / 12 * i++);
         }
     });
+}
+
+const fadeInOne = (el, cls, duration) => {
+    el.style.opacity = 1;
+    el.style.transform = "translateY(0px)";
+
+    // Wait for animation to play before removing class
+    setTimeout(() => {
+        el.classList.remove(cls);
+    }, duration);
 }
 
 const onScreen = el => {
