@@ -62,7 +62,9 @@ $imgWidth: 450px;
     }
 
     .navbar-brand {
-        padding: 0 1.25 * $spacer;
+        margin: 0 $spacer;
+        background-size: 100%;
+        background: url("http://brytex.com/wp-content/uploads/2015/11/brytex.jpg") center/100%;
     }
 
     img {
