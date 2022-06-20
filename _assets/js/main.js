@@ -8,17 +8,18 @@ const FadeClass = "fadein";
 const SlideClass = "slidein";
 
 let ticking = false;
+let slideDone = false;
 
 window.onload = () => {
     scrollAnimCls(document, FadeClass, AnimTime, fadeInOne);
-    scrollAnimCls(document, SlideClass, 1000, slideInRightOne);
+    scrollAnimCls(document, SlideClass, AnimTime, slideInRightOne);
 }
 
 document.addEventListener("scroll", e => {
-    if (!ticking) {
+    if (!ticking && !slideDone) {
         window.requestAnimationFrame(() => {
             scrollAnimCls(document, FadeClass, AnimTime, fadeInOne);
-            scrollAnimCls(document, SlideClass, 1000, slideInRightOne);
+            scrollAnimCls(document, SlideClass, AnimTime, slideInRightOne);
 
             ticking = false;
         });
@@ -45,12 +46,12 @@ const scrollAnimCls = (doc, cls, duration, fn) => {
 }
 
 const fadeInOne = (el, cls, duration) => {
-    el.style.opacity = 1;
-    el.style.transform = "translateY(0px)";
+    el.classList.add("fadedin");
 }
 
 const slideInRightOne = (el, cls, duration) => {
-    el.style.transform = "translateX(0)";
+    el.classList.add("slidin");
+    slideDone = true;
 }
 
 const onScreen = el => {
