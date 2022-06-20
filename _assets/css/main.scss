@@ -21,7 +21,8 @@ $imgWidth: 450px;
     .navbar-nav {
         flex-direction: row;
         justify-content: center;
-        min-width: 30%;
+        width: 33%;
+        text-align: center;
     }
 
     .nav-item {
@@ -77,9 +78,35 @@ $imgWidth: 450px;
 }
 
 #contactCarousel {
-    .carousel-item {
-        * {
-            height: 500px;
+    .carousel-item > * {
+        height: 500px;
+    }
+
+    .carousel-indicators {
+        [data-bs-target] {
+            box-sizing: inherit;
+            width: 3rem;
+            height: 3rem;
+            padding: 0;
+            text-indent: 0;
+            border: 0.15rem solid white;
+            border-radius: 100%;
+            background-color: inherit;
+            transform: translateY(0);
+            color: $secondary;
+            font-size: 0.9375rem;
+            transition-property: opacity, font-size, width, height, transform;
+            transition-duration: 250ms, 150ms, 150ms, 150ms, 150ms;
+        }
+
+        :hover { opacity: 1; }
+
+
+        .active {
+            width: 4rem;
+            height: 4rem;
+            transform: translateY(-12.5%);
+            font-size: 1.25rem;
         }
     }
 }
@@ -87,9 +114,26 @@ $imgWidth: 450px;
 .contact-card {
     margin: 0 auto;
     display: flex;
-    direction: column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    h2 {
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: var(--bs-body-bg);
+    }
+
+    i {
+        font-size: 1.5rem;
+        color: $primary;
+        margin-right: 0.5rem;
+    }
+
+    .btn-outline-light {
+        font-size: 0.75rem;
+        font-weight: 800;
+    }
 }
 
 section {
