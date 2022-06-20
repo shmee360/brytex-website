@@ -7,35 +7,6 @@ $smallDrop: drop-shadow(2px 2px 0px rgb(0 0 0 / 75%));
 $navHeight: 4 * $spacer;
 $imgWidth: 450px;
 
-#buildingCarousel {
-    height: calc(100vh - $navHeight);
-    width: 100%;
-
-    .carousel-indicators {
-        button { filter: $smallDrop; }
-    }
-
-    .carousel-inner {
-        height: 100%;
-        width: 100%;
-
-        .carousel-item {
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
-
-    .carousel-control-prev, .carousel-control-next {
-        .carousel-control-prev-icon, .carousel-control-next-icon {
-            filter: $smallDrop;
-        }
-    }
-}
-
 .nav {
     position: fixed;
     width: 100%;
@@ -76,10 +47,56 @@ $imgWidth: 450px;
     }
 }
 
+#buildingCarousel {
+    height: calc(100vh - $navHeight);
+    width: 100%;
+
+    .carousel-indicators {
+        button { filter: $smallDrop; }
+    }
+
+    .carousel-inner {
+        height: 100%;
+        width: 100%;
+
+        .carousel-item {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            filter: $smallDrop;
+        }
+    }
+}
+
+#contactCarousel {
+    .carousel-item {
+        * {
+            height: 500px;
+        }
+    }
+}
+
+.contact-card {
+    margin: 0 auto;
+    display: flex;
+    direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 section {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .parallax {
@@ -174,16 +191,14 @@ section {
     display: flex;
     justify-content: center;
 
-    .content {
-        h1 {
-            color: $primary;
-            background-color: var(--bs-body-bg);
-        }
-
-        p, h5, ul { color: var(--bs-body-bg); }
-
-        hr { background-color: var(--bs-body-bg); }
+    h1 {
+        color: $primary;
+        background-color: var(--bs-body-bg);
     }
+
+    p, h5, ul, div { color: var(--bs-body-bg); }
+
+    hr { background-color: var(--bs-body-bg); }
 }
 
 .wrap-green {
