@@ -1,50 +1,55 @@
-<div class="galleryGrid">
-    <a class="galleryItem slidein" href="{{- sec_link -}}">
-        <img src="http://brytex.com/wp-content/uploads/2016/01/SelfFramingBuildings_2.jpg"/>
-        <div class="projectInfo">SELF FRAMING BUILDINGS</div>
-    </a>
-    <a class="galleryItem slidein" href="{{- sec_link -}}">
-        <img src="http://brytex.com/wp-content/uploads/2016/01/SelfFramingBuildings_1.jpg"/>
-        <div class="projectInfo">SELF FRAMING BUILDINGS</div>
-    </a>
-    <a class="galleryItem slidein" href="{{- sec_link -}}">
-        <img src="http://brytex.com/wp-content/uploads/2016/01/RigidFrameBuildings_9.jpg"/>
-        <div class="projectInfo">RIGID FRAME BUILDINGS</div>
-    </a>
-    <a class="galleryItem slidein" href="{{- sec_link -}}">
-        <img src="http://brytex.com/wp-content/uploads/2016/01/RigidFrameBuildings_8.jpg"/>
-        <div class="projectInfo">RIGID FRAME BUILDINGS</div>
-    </a>
-    <a class="galleryItem slidein" href="{{- sec_link -}}">
-        <img src="http://brytex.com/wp-content/uploads/2016/01/RigidFrameBuildings_7.jpg"/>
-        <div class="projectInfo">RIGID FRAME BUILDINGS</div>
-    </a>
-    <a class="galleryItem slidein" href="{{- sec_link -}}">
-        <img src="http://brytex.com/wp-content/uploads/2016/01/RigidFrameBuildings_6.jpg"/>
-        <div class="projectInfo">RIGID FRAME BUILDINGS</div>
-    </a>
-    <a class="galleryItem slidein" href="{{- sec_link -}}">
-        <img src="http://brytex.com/wp-content/uploads/2016/01/RigidFrameBuildings_4.jpg"/>
-        <div class="projectInfo">RIGID FRAME BUILDINGS</div>
-    </a>
-    <a class="galleryItem slidein" href="{{- sec_link -}}">
-        <img src="http://brytex.com/wp-content/uploads/2016/01/RigidFrameBuildings_3.jpg"/>
-        <div class="projectInfo">RIGID FRAME BUILDINGS</div>
-    </a>
-    <a class="galleryItem slidein" href="{{- sec_link -}}">
-        <img src="http://brytex.com/wp-content/uploads/2016/01/RigidFrameBuildings_2.jpg"/>
-        <div class="projectInfo">RIGID FRAME BUILDINGS</div>
-    </a>
-    <a class="galleryItem slidein" href="{{- sec_link -}}">
-        <img src="http://brytex.com/wp-content/uploads/2016/01/RigidFrameBuildings_1.jpg"/>
-        <div class="projectInfo">RIGID FRAME BUILDINGS</div>
-    </a>
-    <a class="galleryItem slidein" href="{{- sec_link -}}">
-        <img src="http://brytex.com/wp-content/uploads/2016/01/RigidFrameBuildings_5.jpg"/>
-        <div class="projectInfo">RIGID FRAME BUILDINGS</div>
-    </a>
-    <a class="galleryItem slidein" href="{{- sec_link -}}">
-        <img src="http://brytex.com/wp-content/uploads/2016/01/ModularBuildings_5.jpg"/>
-        <div class="projectInfo">MODULAR BUILDINGS</div>
-    </a>
+<div class="galleryGrid" data-bs-toggle="modal" data-bs-target="#galleryModal">
+{%- for b in gallery.buildingList -%}
+    <div class="galleryItem slidein" data-bs-target="#galleryCarousel"
+         data-bs-slide-to="{{- forloop.index0 -}}">
+        <img src="{{- gallery.baseUrl -}}{{- b.buildingType | remove: " " -}}_
+                  {{- b.buildingIndex -}}.jpg"/>
+        <div class="projectInfo">{{- b.buildingType | upcase -}}</div>
+    </div>
+{% endfor %}
+</div>
+
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close">
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div id="galleryCarousel" class="carousel slide carousel-dark"
+                     data-bs-interval="false" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                    {% for b in gallery.buildingList -%}
+                        <div class="carousel-item
+                                    {%- if forloop.first == true %} active
+                                    {%- endif -%}">
+                            <img class="d-block w-100"
+                                 src="{{- gallery.baseUrl -}}
+                                      {{- b.buildingType | remove: " " -}}_
+                                      {{- b.buildingIndex -}}.jpg"/>
+                        </div>
+                    {%- endfor %}
+                    </div>
+
+                    <button class="carousel-control-prev" type="button"
+                            data-bs-target="#galleryCarousel"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"
+                              aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button"
+                            data-bs-target="#galleryCarousel"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon"
+                              aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

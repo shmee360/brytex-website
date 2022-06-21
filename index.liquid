@@ -112,7 +112,7 @@ images:
         <h1>PHOTO GALLERY</h1>
     </div>
 
-    {% render "./_includes/sections/gallery.liquid", sec_link: "#gallery" %}
+    {% render "./_includes/sections/gallery.liquid", gallery: gallery, sec_link: "#gallery" %}
 </section>
 
 <section id="contact"
@@ -125,7 +125,7 @@ images:
 
 <div id="finisher" class="d-flex flex-column align-items-center py-4">
     <a href="#top" tabindex="-1">
-        <button type="button" class="btn btn-outline-primary mb-3">
+        <button type="button" class="btn btn-outline-primary mb-3" aria-label="Return to top of page">
             <i class="fas fa-angles-up fa-bounce"></i>
         </button>
     </a>

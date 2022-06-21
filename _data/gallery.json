@@ -1,0 +1,93 @@
+{
+    "baseUrl": "http://brytex.com/wp-content/uploads/2016/01/",
+    "buildingList": [
+        {
+            "buildingType": "Self Framing Buildings",
+            "buildingIndex": 2
+        },
+        {
+            "buildingType": "Self Framing Buildings",
+            "buildingIndex": 1
+        },
+        {
+            "buildingType": "Rigid Frame Buildings",
+            "buildingIndex": 9
+        },
+        {
+            "buildingType": "Rigid Frame Buildings",
+            "buildingIndex": 8
+        },
+        {
+            "buildingType": "Rigid Frame Buildings",
+            "buildingIndex": 7
+        },
+        {
+            "buildingType": "Rigid Frame Buildings",
+            "buildingIndex": 6
+        },
+        {
+            "buildingType": "Rigid Frame Buildings",
+            "buildingIndex": 5
+        },
+        {
+            "buildingType": "Rigid Frame Buildings",
+            "buildingIndex": 4
+        },
+        {
+            "buildingType": "Rigid Frame Buildings",
+            "buildingIndex": 3
+        },
+        {
+            "buildingType": "Rigid Frame Buildings",
+            "buildingIndex": 2
+        },
+        {
+            "buildingType": "Rigid Frame Buildings",
+            "buildingIndex": 1
+        },
+        {
+            "buildingType": "Modular Buildings",
+            "buildingIndex": 5
+        },
+        {
+            "buildingType": "Modular Buildings",
+            "buildingIndex": 4
+        },
+        {
+            "buildingType": "Modular Buildings",
+            "buildingIndex": 3
+        },
+        {
+            "buildingType": "Modular Buildings",
+            "buildingIndex": 2
+        },
+        {
+            "buildingType": "Modular Buildings",
+            "buildingIndex": 1
+        },
+        {
+            "buildingType": "Custom Fabrication",
+            "buildingIndex": 1
+        },
+        {
+            "buildingType": "Custom Fabrication",
+            "buildingIndex": 2
+        },
+        {
+            "buildingType": "Custom Fabrication",
+            "buildingIndex": 3
+        },
+        {
+            "buildingType": "Custom Fabrication",
+            "buildingIndex": 4
+        },
+        {
+            "buildingType": "Custom Fabrication",
+            "buildingIndex": 5
+        },
+        {
+            "buildingType": "Custom Fabrication",
+            "buildingIndex": 6
+        }
+    ]
+}
