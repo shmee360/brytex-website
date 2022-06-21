@@ -95,12 +95,15 @@ $imgWidth: 450px;
             transform: translateY(0);
             color: $secondary;
             font-size: 0.9375rem;
-            transition-property: opacity, font-size, width, height, transform;
-            transition-duration: 250ms, 150ms, 150ms, 150ms, 150ms;
+            transition-property: opacity, font-size, width, height, transform, outline;
+            transition-duration: 250ms, 150ms, 150ms, 150ms, 150ms, 100ms;
         }
 
         :hover { opacity: 1; }
 
+        [data-bs-target]:focus-visible {
+            outline: $secondary solid 3px;
+        }
 
         .active {
             width: 4rem;
@@ -117,21 +120,41 @@ $imgWidth: 450px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    h2 {
-        font-size: 1.2rem;
-        font-weight: 800;
-        color: var(--bs-body-bg);
-    }
+    color: var(--bs-body-bg);
 
     i {
-        font-size: 1.5rem;
         color: $primary;
-        margin-right: 0.5rem;
+    }
+
+    h2, h3 { font-weight: 800; }
+
+    a:hover { color: $primary; }
+    a {
+        color: var(--bs-body-bg);
+        text-decoration: inherit;
+        transition: color 250ms;
+    }
+
+    h2 {
+        font-size: 1.2 * $spacer;
+
+        i {
+            font-size: 1.5 * $spacer;
+            margin-right: 0.5 * $spacer;
+        }
+    }
+
+    h3 {
+        font-size: $spacer;
+
+        i {
+            font-size: 1.25 * $spacer;
+            margin-right: 0.4 * $spacer;
+        }
     }
 
     .btn-outline-light {
-        font-size: 0.75rem;
+        font-size: 0.75 * $spacer;
         font-weight: 800;
     }
 }
