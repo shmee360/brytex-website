@@ -8,7 +8,6 @@ const FadeClass = "fadein";
 const SlideClass = "slidein";
 
 let ticking = false;
-let slideDone = false;
 
 window.onload = () => {
     scrollAnimCls(document, FadeClass, AnimTime, fadeInOne);
@@ -16,7 +15,7 @@ window.onload = () => {
 }
 
 document.addEventListener("scroll", e => {
-    if (!ticking && !slideDone) {
+    if (!ticking) {
         window.requestAnimationFrame(() => {
             scrollAnimCls(document, FadeClass, AnimTime, fadeInOne);
             scrollAnimCls(document, SlideClass, AnimTime, slideInRightOne);
@@ -51,7 +50,6 @@ const fadeInOne = (el, cls, duration) => {
 
 const slideInRightOne = (el, cls, duration) => {
     el.classList.add("slidin");
-    slideDone = true;
 }
 
 const onScreen = el => {
