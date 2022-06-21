@@ -111,6 +111,8 @@ $imgWidth: 450px;
             transform: translateY(-12.5%);
             font-size: 1.25rem;
         }
+
+        position: absolute !important;
     }
 }
 
@@ -187,16 +189,11 @@ section {
 
 .slidein {
     transform: translateX(-100vw);
-    width: 0;
-    height: 0;
-    transition-property: transform, width, height;
-    transition-duration: 2s;
+    transition: transform 1s;
 }
 
 .slidin {
     transform: translateX(0);
-    width: 25%;
-    height: calc((100vh - $navHeight) * (1 / 3));
 }
 
 .content {
@@ -323,6 +320,8 @@ section {
     flex-direction: column;
     align-items: center;
     position: relative;
+    width: 25%;
+    height: calc((100vh - $navHeight) * (1 / 3));
 
     img {
         height: 100%;
@@ -361,4 +360,21 @@ section {
 
 .smallHr { width: 3 * $spacer; }
 
-#finisher { height: $navHeight; }
+#finisher {
+    margin-bottom: $navHeight;
+    --fa-animation-iteration-count: 0;
+    --fa-bounce-land-scale-y: 1;
+    --fa-bounce-jump-scale-y: 1;
+    --fa-bounce-land-scale-x: 1;
+    --fa-bounce-jump-scale-x: 1;
+    --fa-bounce-start-scale-y: 1;
+    --fa-bounce-start-scale-x: 1;
+    --fa-bounce-rebound: 0;
+    --fa-animation-timing: ease;
+    --fa-animation-duration: 1s;
+    --fa-animation-delay: -1s;
+
+    button:hover > i {
+        --fa-animation-iteration-count: infinite;
+    }
+}

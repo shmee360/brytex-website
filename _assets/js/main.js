@@ -3,22 +3,23 @@ import './../css/main.scss';
 import './vendor/popover';
 import './vendor/tooltip';
 
-const AnimTime = 2000;
+const FadeTime = 2000;
+const SlideTime = 1000;
 const FadeClass = "fadein";
 const SlideClass = "slidein";
 
 let ticking = false;
 
 window.onload = () => {
-    scrollAnimCls(document, FadeClass, AnimTime, fadeInOne);
-    scrollAnimCls(document, SlideClass, AnimTime, slideInRightOne);
+    scrollAnimCls(document, FadeClass, FadeTime, fadeInOne);
+    scrollAnimCls(document, SlideClass, SlideTime, slideInRightOne);
 }
 
 document.addEventListener("scroll", e => {
     if (!ticking) {
         window.requestAnimationFrame(() => {
-            scrollAnimCls(document, FadeClass, AnimTime, fadeInOne);
-            scrollAnimCls(document, SlideClass, AnimTime, slideInRightOne);
+            scrollAnimCls(document, FadeClass, FadeTime, fadeInOne);
+            scrollAnimCls(document, SlideClass, SlideTime, slideInRightOne);
 
             ticking = false;
         });
