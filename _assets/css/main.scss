@@ -189,7 +189,7 @@ section {
 
 .slidein {
     transform: translateX(-100vw);
-    transition: transform 1s;
+    transition: transform 0.5s;
 }
 
 .slidin {
@@ -347,7 +347,7 @@ section {
     }
 }
 
-.galleryItem:hover {
+.galleryItem:hover, .galleryItem:focus-visible {
     img {
         transform: translateY($spacer - $navHeight);
         transition: transform 0.2s;
@@ -357,6 +357,12 @@ section {
         transform: translateY(0);
         transition: transform 225ms;
     }
+}
+
+.galleryItem:focus-visible {
+    outline: $primary solid 3px;
+    outline-offset: 5px;
+    z-index: $zindex-dropdown;
 }
 
 .smallHr { width: 3 * $spacer; }

@@ -32,7 +32,7 @@ images:
             <a class="nav-link" href="#gallery">PHOTO GALLERY</a>
         </li>
         <li class="nav-item">
-            <a id="contactLink" class="nav-link" href="#contact">CONTACT</a>
+            <a id="contactLink" class="nav-link">CONTACT</a>
         </li>
     </ul>
 </nav>
@@ -47,20 +47,24 @@ images:
         {%- endif %}
             aria-label="Slide{{forloop.index}}"
         ></button>
-    {% endfor %}
+    {%- endfor %}
     </div>
 
     <div class="carousel-inner">
-    {%- for i in images %}
-        {%- capture path %}img/{{ i }}{% endcapture %}
-        {%- if forloop.first == true -%}
+    {%- for i in images -%}
+
+        {%- capture path -%}
+            img/{{ i }}
+        {%- endcapture -%}
+
+        {%- if forloop.first == true %}
         <div class="carousel-item active">
-        {%- else -%}
+        {%- else %}
         <div class="carousel-item">
         {%- endif %}
         <img src="{{ path }}" alt="{{ i }}">
         </div>
-    {% endfor %}
+    {%- endfor %}
     </div>
 
     <button class="carousel-control-prev" type="button"

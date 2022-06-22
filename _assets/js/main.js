@@ -4,7 +4,7 @@ import './vendor/popover';
 import './vendor/tooltip';
 
 const FadeTime = 2000;
-const SlideTime = 1000;
+const SlideTime = 500;
 const FadeClass = "fadein";
 const SlideClass = "slidein";
 

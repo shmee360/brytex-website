@@ -1,12 +1,18 @@
 <div class="galleryGrid" data-bs-toggle="modal" data-bs-target="#galleryModal">
-{%- for b in gallery.buildingList -%}
+{%- for b in gallery.buildingList %}
     <div class="galleryItem slidein" data-bs-target="#galleryCarousel"
-         data-bs-slide-to="{{- forloop.index0 -}}">
-        <img src="{{- gallery.baseUrl -}}{{- b.buildingType | remove: " " -}}_
-                  {{- b.buildingIndex -}}.jpg"/>
-        <div class="projectInfo">{{- b.buildingType | upcase -}}</div>
+         data-bs-slide-to="{{ forloop.index0 }}" tabindex="0"
+         aria-label="{{ b.buildingType }} # {{- b.buildingIndex -}}">
+
+        <img src="{{ gallery.baseUrl -}}
+                  {{- b.buildingType | remove: " " -}}
+                  _
+                  {{- b.buildingIndex -}}
+                  .jpg"/>
+
+        <div class="projectInfo">{{ b.buildingType | upcase }}</div>
     </div>
-{% endfor %}
+{%- endfor %}
 </div>
 
 <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
@@ -22,14 +28,16 @@
                 <div id="galleryCarousel" class="carousel slide carousel-dark"
                      data-bs-interval="false" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                    {% for b in gallery.buildingList -%}
+                    {%- for b in gallery.buildingList %}
                         <div class="carousel-item
                                     {%- if forloop.first == true %} active
                                     {%- endif -%}">
                             <img class="d-block w-100"
                                  src="{{- gallery.baseUrl -}}
-                                      {{- b.buildingType | remove: " " -}}_
-                                      {{- b.buildingIndex -}}.jpg"/>
+                                      {{- b.buildingType | remove: " " -}}
+                                      _
+                                      {{- b.buildingIndex -}}
+                                      .jpg"/>
                         </div>
                     {%- endfor %}
                     </div>

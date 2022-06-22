@@ -1,18 +1,18 @@
 <h1>COLOUR CHART</h1>
 
-{%- for c in colours -%}
-    <h5>{{ c.name | upcase }} COLOURS &ndash; {{ c.series }} SERIES</h5>
+{%- for c in colours %}
+    <h5> {{- c.name | upcase }} COLOURS &ndash; {{ c.series }} SERIES</h5>
     <hr class="smallHr"/>
 
     <div class="colourGrid">
-        {%- for i in c.items -%}
+        {%- for i in c.items %}
             <div>
-                <div class="fadein" style="background-color: {{- i.colour -}};"></div>
-                <p>{{ i.name | upcase }} &ndash; {{ i.code }}</p>
+                <div class="fadein" style="background-color: {{- i.colour -}} ;"></div>
+                <p> {{- i.name | upcase }} &ndash; {{ i.code -}} </p>
             </div>
-        {% endfor %}
+        {%- endfor %}
     </div>
-{% endfor %}
+{%- endfor %}
 
 <ul style="width: 65%; margin: auto;">
     <li>Colours shown are printed approximations of actual painted product and
