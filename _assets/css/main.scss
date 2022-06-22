@@ -380,6 +380,11 @@ section {
     }
 }
 
-body.modal-open {
-    overflow: auto;
+.modal {
+    overflow-y: auto !important;
+}
+
+.modal-open {
+    overflow: auto !important;
+    padding-right: 0 !important;
 }
