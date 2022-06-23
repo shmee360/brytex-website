@@ -5,28 +5,37 @@
 
 $smallDrop: drop-shadow(2px 2px 0px rgb(0 0 0 / 75%));
 $navHeight: 4 * $spacer;
+$logoMargin: calc((5 / 16) * $spacer);
 $imgWidth: 450px;
 
-.nav {
+.navbar {
+    @include media-breakpoint-up(xl) {
+        bottom: 0;
+    }
+    @include media-breakpoint-down(xl) {
+        top: 0;
+    }
+
     position: fixed;
     width: 100%;
-    bottom: 0;
     background-color: var(--bs-body-bg);
     font-weight: bold;
     box-shadow: 0 -5px 20px -5px rgb(0 0 0 / 50%);
     z-index: $zindex-sticky;
-    display: flex;
-    justify-content: center;
+
+    .navbar-collapse {
+        @include media-breakpoint-up(xl) {
+            width: 25%;
+        }
+    }
 
     .navbar-nav {
         flex-direction: row;
-        justify-content: center;
-        width: 33%;
         text-align: center;
     }
 
     .nav-item {
-        padding: 0 $spacer;
+        padding: 0 0.75 * $spacer;
 
         a.nav-link.active {
             color: $nav-link-hover-color;
@@ -35,21 +44,40 @@ $imgWidth: 450px;
 
     .navbar-brand {
         padding: 0;
-        margin: 0.3125 * $spacer $spacer;
-        // height: $navheight;
+        margin: 0px 2.5 * $spacer;
         background-size: 100%;
         background: url("http://brytex.com/wp-content/uploads/2015/11/brytex.jpg") center/100%;
     }
 
+    .topContainer { min-height: $navHeight; }
+
+    .topBrand {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .navbar-toggler:focus:not(:focus-visible),
+    .navbar-toggler:active {
+        outline: none;
+        box-shadow: none;
+    }
+
     img {
-        height: $navHeight - 0.3125 * $spacer * 2;
-        width: 100%;
+        height: $navHeight;
+        width: 6.25rem;
         padding: 0 $spacer;
+        opacity: 0;
     }
 }
 
 #buildingCarousel {
     height: calc(100vh - $navHeight);
+    @include media-breakpoint-down(xl) {
+        margin-top: $navHeight;
+    }
+
     width: 100%;
 
     .carousel-indicators {
@@ -64,9 +92,11 @@ $imgWidth: 450px;
             height: 100%;
             width: 100%;
             overflow: hidden;
-            display: flex;
             align-items: center;
             justify-content: center;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
     }
 

@@ -1,0 +1,42 @@
+<div id="buildingCarousel"
+     class="carousel slide carousel-fade d-lg-block d-none"
+     data-bs-ride="carousel">
+    <div class="carousel-indicators">
+    {%- for _ in images %}
+        <button type="button" data-bs-target="#buildingCarousel"
+            data-bs-slide-to="{{ forloop.index0 }}"
+        {%- if forloop.first == true %}
+            class="active" aria-current="true"
+        {%- endif %}
+            aria-label="Slide{{forloop.index}}"
+        ></button>
+    {%- endfor %}
+    </div>
+
+    <div class="carousel-inner">
+    {%- for i in images -%}
+
+        {%- capture path -%}
+            img/{{ i }}
+        {%- endcapture -%}
+
+        <div class="carousel-item
+        {%- if forloop.first == true %} active {%- endif -%}
+                   "
+                   style="background-image: url({{ path }});"
+                   aria-label="{{ i }}">
+        </div>
+    {%- endfor %}
+    </div>
+
+    <button class="carousel-control-prev" type="button"
+        data-bs-target="#buildingCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button"
+        data-bs-target="#buildingCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
