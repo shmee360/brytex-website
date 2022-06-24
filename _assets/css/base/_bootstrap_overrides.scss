@@ -2,3 +2,31 @@ $primary: #1f7f00;
 $secondary: #999;
 $link-hover-color: #000;
 $box-shadow: 0 0 0.5rem 0.5rem rgb(0 0 0 / 15%);
+$position-values: (
+    "0": 0,
+    "50": 50%,
+    "100": 100%,
+    "i": inherit
+);
+
+@import "./../../../node_modules/bootstrap/scss/functions";
+@import "./../../../node_modules/bootstrap/scss/variables";
+@import "./../../../node_modules/bootstrap/scss/utilities";
+
+$smallDrop: drop-shadow(2px 2px 0px rgb(0 0 0 / 75%));
+$navHeight: 4 * $spacer;
+$logoMargin: calc((5 / 16) * $spacer);
+$imgWidth: 450px;
+
+$utilities: map-merge(
+    $utilities, (
+        "bottom": map-merge(
+            map-get($utilities, "bottom"),
+            ( responsive: true ),
+        ),
+        "top": map-merge(
+            map-get($utilities, "top"),
+            ( responsive: true ),
+        ),
+    )
+);

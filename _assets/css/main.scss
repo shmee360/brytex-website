@@ -3,24 +3,11 @@
 @import "./base/_bootstrap_overrides.scss";
 @import "./vendor/_bootstrap.scss";
 
-$smallDrop: drop-shadow(2px 2px 0px rgb(0 0 0 / 75%));
-$navHeight: 4 * $spacer;
-$logoMargin: calc((5 / 16) * $spacer);
-$imgWidth: 450px;
-
 .navbar {
-    @include media-breakpoint-up(xl) {
-        bottom: 0;
-    }
-    @include media-breakpoint-down(xl) {
-        top: 0;
-    }
-
     position: fixed;
     width: 100%;
     background-color: var(--bs-body-bg);
     font-weight: bold;
-    // box-shadow: 0 -5px 20px -5px rgb(0 0 0 / 50%);
     z-index: $zindex-sticky;
 
     .navbar-collapse {
