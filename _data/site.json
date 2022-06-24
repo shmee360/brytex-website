@@ -2,5 +2,42 @@
     "title": "Brytex Building Systems",
     "description": "Quality Service & Quality Products",
     "logo": "./img/logo.jpg",
-    "directions": "https://www.google.ca/maps/dir/''/5610+97+St+NW,+Edmonton,+AB+T6E+3J1/data=!4m5!4m4!1m0!1m2!1m1!1s0x53a018b71b4593b9:0xbd73d916ac3f5b7d?sa=X&ved=0ahUKEwijuIvbmdDKAhWFNJoKHaNFBD8QwwUIHTAA"
+    "directions": "https://www.google.ca/maps/dir/''/5610+97+St+NW,+Edmonton,+AB+T6E+3J1/data=!4m5!4m4!1m0!1m2!1m1!1s0x53a018b71b4593b9:0xbd73d916ac3f5b7d?sa=X&ved=0ahUKEwijuIvbmdDKAhWFNJoKHaNFBD8QwwUIHTAA",
+    "sections": [
+        {
+            "link": "buildingCarousel",
+            "name": "Home",
+            "lgHide": true
+        },
+        {
+            "link": "about",
+            "name": "About Brytex",
+            "lgHide": false
+        },
+        {
+            "link": "services",
+            "name": "Services",
+            "lgHide": false
+        },
+        {
+            "link": "products",
+            "name": "Products",
+            "lgHide": false
+        },
+        {
+            "link": "colours",
+            "name": "Colour Chart",
+            "lgHide": false
+        },
+        {
+            "link": "gallery",
+            "name": "Photo Gallery",
+            "lgHide": false
+        },
+        {
+            "link": "contact",
+            "name": "Contact",
+            "lgHide": false
+        }
+    ]
 }

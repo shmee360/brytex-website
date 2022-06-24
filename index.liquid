@@ -6,9 +6,11 @@ images:
     - cover_1.jpg
 ---
 
-{%- render "./_includes/widgets/navbar.liquid", logo: site.logo %}
+{%- render "./_includes/widgets/navbar.liquid",
+           logo: site.logo, sections: site.sections %}
 
-{%- render "./_includes/widgets/building_carousel.liquid", images: images %}
+{%- render "./_includes/widgets/building_carousel.liquid",
+           images: images, sections: site.sections %}
 
 <section id="about">
     <div class="content">

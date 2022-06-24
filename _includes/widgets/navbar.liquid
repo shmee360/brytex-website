@@ -1,5 +1,5 @@
 <nav id="navigation" class="navbar navbar-expand-xl justify-content-center
-                            align-items-center py-0">
+                            align-items-center py-0 shadow">
     <div class="container-fluid">
         <div class="d-flex d-xl-none w-100 justify-content-end
                     position-relative topContainer">
@@ -7,29 +7,38 @@
                aria-current="page" href="">
                 <img src="{{ logo }}" alt="Brytex Logo">
             </a>
-            <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse" data-bs-target=".navbarNer"
-                    aria-controls="navbarNer" aria-expanded="false"
+            <button class="navbar-toggler text-muted" type="button"
+                    data-bs-toggle="collapse" data-bs-target=".navbarItems"
+                    aria-controls="navbarItems" aria-expanded="false"
                     aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-        <div class="collapse navbar-collapse justify-content-end navbarNer
+        <div class="collapse navbar-collapse justify-content-end navbarItems
                     w-100">
             <ul class="navbar-nav flex-column flex-xl-row">
-                <li class="nav-item d-flex align-items-center"
-                    aria-current="true">
-                    <a class="nav-link active" href="#buildingCarousel">HOME</a>
+        {%- for s in sections -%}
+            <li class="nav-item d-
+                       {%- if s.lgHide -%}
+                           none d-lg-
+                       {%- endif -%}
+                       flex align-items-center border-secondary"
+                {% if forloop.last == true -%}
+                    style="border: none;"
+                {%- endif %}
+            {%- if forloop.first == true %}
+                aria-current="true">
+                <a class="nav-link active" 
+            {%- endif -%}
+                >
+                <a class="nav-link" 
+                   href="#{{ s.link }}">
+                        {{- s.name | upcase -}}
+                    </a>
                 </li>
-                <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link" href="#about">ABOUT BRYTEX</a>
-                </li>
-                <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link" href="#services">SERVICES</a>
-                </li>
-                <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link" href="#products">PRODUCTS</a>
-                </li>
+        {%- if forloop.index == forloop.rindex or
+               forloop.index0 == forloop.rindex or
+               forloop.length == 2 %}
             </ul>
         </div>
         <div class="collapse navbar-collapse justify-content-center
@@ -38,18 +47,11 @@
                 <img src="{{ logo }}" alt="Brytex Logo">
             </a>
         </div>
-        <div class="collapse navbar-collapse justify-content-start navbarNer
+        <div class="collapse navbar-collapse justify-content-start navbarItems
                     w-100">
             <ul class="navbar-nav flex-column flex-xl-row">
-                <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link" href="#colours">COLOUR CHART</a>
-                </li>
-                <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link" href="#gallery">PHOTO GALLERY</a>
-                </li>
-                <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link" href="#contact">CONTACT</a>
-                </li>
+        {%- endif %}
+        {%- endfor %}
             </ul>
         </div>
     </div>

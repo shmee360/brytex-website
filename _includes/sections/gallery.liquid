@@ -1,6 +1,7 @@
-<div class="galleryGrid" data-bs-toggle="modal" data-bs-target="#galleryModal">
+<div class="galleryGrid pe-none user-select-none" data-bs-toggle="modal"
+     data-bs-target="#galleryModal">
 {%- for b in gallery.buildingList %}
-    <div class="galleryItem slidein" data-bs-target="#galleryCarousel"
+    <div class="galleryItem slidein pe-auto" data-bs-target="#galleryCarousel"
          data-bs-slide-to="{{ forloop.index0 }}" tabindex="0"
          aria-label="{{ b.buildingType }} # {{- b.buildingIndex -}}">
 
