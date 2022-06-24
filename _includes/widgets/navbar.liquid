@@ -1,10 +1,12 @@
 <nav id="navigation" class="navbar navbar-expand-xl justify-content-center
                             align-items-center py-0 shadow bottom-i bottom-xl-0
-                            top-0 top-xl-i">
+                            top-0 top-xl-i position-fixed w-100 bg-white
+                            fw-bold zi-fix">
     <div class="container-fluid">
-        <div class="d-flex d-xl-none w-100 justify-content-end
-                    position-relative topContainer">
-            <a class="navbar-brand mx-0 topBrand"
+        <div class="d-flex d-xl-none w-100 hmin-nav justify-content-end
+                    position-relative">
+            <a class="navbar-brand mx-0 position-absolute top-50 start-50
+                      translate-middle"
                aria-current="page" href="">
                 <img src="{{ logo }}" alt="Brytex Logo">
             </a>
@@ -16,16 +18,17 @@
             </button>
         </div>
         <div class="collapse navbar-collapse justify-content-end navbarItems
-                    w-100">
-            <ul class="navbar-nav flex-column flex-xl-row">
+                    w-100 w-xl-25">
+            <ul class="navbar-nav flex-column flex-xl-row text-center">
         {%- for s in sections -%}
             <li class="nav-item d-
                        {%- if s.lgHide -%}
                            none d-lg-
                        {%- endif -%}
-                       flex align-items-center border-secondary py-1 py-xl-0"
+                       flex align-items-center border-secondary border-bottom-1
+                       px-xl-gut py-1 py-xl-0 mx-1n8 m-xl-0"
                 {% if forloop.last == true -%}
-                    style="border: none;"
+                    style="border: none !important;"
                 {%- endif %}
             {%- if forloop.first == true %}
                 aria-current="true">
@@ -34,23 +37,23 @@
                 >
                 <a class="nav-link" 
                    href="#{{ s.link }}">
-                        {{- s.name | upcase -}}
-                    </a>
-                </li>
+                    {{- s.name | upcase -}}
+                </a>
+            </li>
         {%- if forloop.index == forloop.rindex or
                forloop.index0 == forloop.rindex or
                forloop.length == 2 %}
             </ul>
         </div>
         <div class="collapse navbar-collapse justify-content-center
-                    flex-shrink-1">
+                    flex-shrink-1 w-xl-25">
             <a class="navbar-brand bottomBrand" aria-current="page" href="">
                 <img src="{{ logo }}" alt="Brytex Logo">
             </a>
         </div>
         <div class="collapse navbar-collapse justify-content-start navbarItems
-                    w-100">
-            <ul class="navbar-nav flex-column flex-xl-row">
+                    w-100 w-xl-25">
+            <ul class="navbar-nav flex-column flex-xl-row text-center">
         {%- endif %}
         {%- endfor %}
             </ul>

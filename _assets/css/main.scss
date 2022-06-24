@@ -4,34 +4,9 @@
 @import "./vendor/_bootstrap.scss";
 
 .navbar {
-    position: fixed;
-    width: 100%;
-    background-color: var(--bs-body-bg);
-    font-weight: bold;
-    z-index: $zindex-sticky;
-
-    .navbar-collapse {
-        @include media-breakpoint-up(xl) {
-            width: 25%;
-        }
-    }
-
-    .navbar-nav {
-        flex-direction: row;
-        text-align: center;
-    }
-
-    @include media-breakpoint-down(xl) {
-        ul > * {
-            margin: 0 1.125 * $spacer;
-            border-bottom: 1px dotted;
-            font-size: 0.75 * $spacer;
-        }
-    }
-
     .nav-item {
-        @include media-breakpoint-up(xl) {
-            padding: 0 var(--bs-gutter-x, 0.75 * $spacer);
+        @include media-breakpoint-down(xl) {
+            font-size: 0.75 * $spacer;
         }
 
         a.nav-link.active {
@@ -42,17 +17,7 @@
     .navbar-brand {
         padding: 0;
         margin: 0px 2.5 * $spacer;
-        background-size: 100%;
         background: url("http://brytex.com/wp-content/uploads/2015/11/brytex.jpg") center/100%;
-    }
-
-    .topContainer { min-height: $navHeight; }
-
-    .topBrand {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 
     .navbar-toggler:focus:not(:focus-visible),

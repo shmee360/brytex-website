@@ -9,6 +9,18 @@ $position-values: (
     "i": inherit
 );
 
+$spacer: 1rem;
+$spacers: (
+    "0": 0,
+    "1": 0.25 * $spacer,
+    "2": 0.5 * $spacer,
+    "3": 1 * $spacer,
+    "4": 1.5 * $spacer,
+    "5": 3 * $spacer,
+    "gut": 0.75 * $spacer,
+    "1n8": 1.125 * $spacer,
+);
+
 @import "./../../../node_modules/bootstrap/scss/functions";
 @import "./../../../node_modules/bootstrap/scss/variables";
 @import "./../../../node_modules/bootstrap/scss/utilities";
@@ -27,6 +39,39 @@ $utilities: map-merge(
         "top": map-merge(
             map-get($utilities, "top"),
             ( responsive: true ),
+        ),
+
+        // I legitimately do not understand why this one isn't a default
+        "z-index": (
+            property: z-index,
+            class: zi,
+            responsive: true,
+            values: (
+                "ddown": $zindex-dropdown,
+                "stic": $zindex-sticky,
+                "fix": $zindex-fixed,
+                "modalbg": $zindex-modal-backdrop,
+                "offcanv": $zindex-offcanvas,
+                "modal": $zindex-modal,
+                "popo": $zindex-popover,
+                "toolt": $zindex-tooltip,
+            )
+        ),
+
+        "min-height": (
+            property: min-height,
+            class: hmin,
+            responsive: true,
+            values: ( "nav": $navHeight )
+        ),
+
+        "border-bottom": map-merge(
+            map-get($utilities, "border-bottom"), (
+                values: map-merge(
+                    map-get(map-get($utilities, "border-bottom"), "values"),
+                    ( 1: 1px dotted ),
+                ),
+            ),
         ),
     )
 );
