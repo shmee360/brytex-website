@@ -239,30 +239,6 @@ section {
 
         li { padding-left: $spacer; }
     }
-
-    .right-pics {
-        float: right;
-        margin-left: 4%;
-    }
-
-    .left-pics {
-        float: left;
-        margin-right: 4%;
-    }
-
-    .right-pics, .left-pics {
-        width: $imgWidth;
-        height: 100%;
-        img:not(:last-child) { margin-bottom: 1.25 * $spacer; }
-        overflow: visible;
-
-        img {
-            display: block;
-            width: 100%;
-            height: auto;
-            max-width: $imgWidth;
-        }
-    }
 }
 
 .wrap-cont {
@@ -321,8 +297,20 @@ section {
     flex-direction: column;
     align-items: center;
     position: relative;
-    width: 25%;
-    height: calc((100vh - $navHeight) * (1 / 3));
+    width: 400px;
+    height: 260px;
+    min-width: 25%;
+    @include media-breakpoint-down(xl) {
+        width: 33%;
+    }
+    @include media-breakpoint-down(md) {
+        width: 50%;
+    }
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+    min-height: calc((100vh - $navHeight) / 3);
+    max-height: calc(100vh - $navHeight);
     cursor: pointer;
 
     img {
@@ -332,9 +320,9 @@ section {
     }
 
     .projectInfo {
-        transform: translateY($navHeight);
+        transform: translateY(100%);
         transition: transform 225ms;
-        height: $navHeight;
+        height: 25%;
         bottom: 0px;
         left: 0px;
         position: absolute;
@@ -350,7 +338,7 @@ section {
 
 .galleryItem:hover, .galleryItem:focus-visible {
     img {
-        transform: translateY($spacer - $navHeight);
+        transform: translateY(calc($spacer - 25%));
         transition: transform 0.2s;
     }
 
