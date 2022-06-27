@@ -1,9 +1,16 @@
 # SERVICES
 
-<div class="left-pics">
-	<img class="fadein" src="http://brytex.com/wp-content/uploads/2015/10/5.jpg">
-	<br/>
-	<img class="fadein" src="http://brytex.com/wp-content/uploads/2016/02/services.jpg">
+<div class="row row-cols-1 row-cols-md-2 row-cols-xl-1 float-xl-start me-xl-im w-xl-im">
+	<div class="fadein p-0 pb-1n4 pb-xl-1n4 pe-md-1n4 pe-xl-0 col">
+        <div class="overflow-hidden d-flex justify-content-center align-items-center">
+            <img src="http://brytex.com/wp-content/uploads/2015/10/5.jpg">
+        </div>
+    </div>
+	<div class="fadein p-0 pb-1n4 pb-xl-1n4 col">
+        <div class="overflow-hidden d-flex justify-content-center align-items-center">
+            <img style="height: 281px;" src="http://brytex.com/wp-content/uploads/2016/02/services.jpg">
+        </div>
+    </div>
 </div>
 
 Brytex’s engineers and drafting department ensure that all designs comply with

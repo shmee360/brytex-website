@@ -1,13 +1,18 @@
 # ABOUT BRYTEX
 
-<div class="right-pics">
-	<img class="fadein" src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex_1.jpg">
-	<br/>
-	<img class="fadein" src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex_2.jpg">
-	<br/>
-	<img class="fadein" src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex3.jpg">
-	<br/>
-	<img class="fadein" src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex4.jpg">
+<div class="d-none d-xl-flex row row-cols-1 float-end ms-im w-im">
+	<div class="fadein p-0 mb-1n4 col overflow-hidden d-flex justify-content-center align-items-center">
+        <img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex_1.jpg">
+    </div>
+	<div class="fadein p-0 mb-1n4 col overflow-hidden d-flex justify-content-center align-items-center">
+        <img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex_2.jpg">
+    </div>
+	<div class="fadein p-0 mb-1n4 col overflow-hidden d-flex justify-content-center align-items-center">
+        <img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex3.jpg">
+    </div>
+	<div class="fadein p-0 mb-1n4 col overflow-hidden d-flex justify-content-center align-items-center">
+        <img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex4.jpg">
+    </div>
 </div>
 
 Brytex is the market leading steel building supplier in Western Canada. Various
@@ -39,3 +44,26 @@ among employees and clients.
 Our quality program/system provides the incentive for all levels, within the
 Company, to serve the needs of the client at every stage in the manufacturing
 cycle from acceptance of tender to on time completion of the project.
+
+<div class="d-xl-none row row-cols-md-2 row-cols-xl-1">
+    <div class="p-0 pe-1n4 pb-1n4 col">
+        <div class="overflow-hidden d-flex justify-content-center align-items-center">
+            <img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex_1.jpg">
+        </div>
+    </div>
+    <div class="p-0 pb-1n4 col">
+        <div class="overflow-hidden d-flex justify-content-center align-items-center">
+            <img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex_2.jpg">
+        </div>
+    </div>
+    <div class="p-0 pe-1n4 col">
+        <div class="overflow-hidden d-flex justify-content-center align-items-center">
+            <img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex3.jpg">
+        </div>
+    </div>
+    <div class="p-0 col">
+        <div class="overflow-hidden d-flex justify-content-center align-items-center">
+            <img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex4.jpg">
+        </div>
+    </div>
+</div>

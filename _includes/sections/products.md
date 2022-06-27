@@ -1,7 +1,7 @@
 # PRODUCTS
 <div>
-<div class="left-pics">
-    <img class="fadein" src="http://brytex.com/wp-content/uploads/2016/01/Products_RigidFrameBuildings.jpg">
+<div class="row row-cols-1 row-cols-md-2 row-cols-xl-1 float-xl-start me-xl-im w-xl-im justify-content-center">
+	<img class="fadein p-0 pb-1n4 pe-md-5n8 px-lg-0 col" src="http://brytex.com/wp-content/uploads/2016/01/Products_RigidFrameBuildings.jpg">
     <br/>
 </div>
 
@@ -30,8 +30,8 @@ alternative to the tapered.
 </div>
 
 <div>
-<div class="left-pics">
-    <img class="fadein" src="http://brytex.com/wp-content/uploads/2016/01/Products_ModularBuildings.jpg">
+<div class="row row-cols-1 row-cols-md-2 row-cols-xl-1 float-xl-start me-xl-im w-xl-im justify-content-center">
+    <img class="fadein p-0 pb-1n4 pe-md-5n8 px-lg-0 col" src="http://brytex.com/wp-content/uploads/2016/01/Products_ModularBuildings.jpg">
     <br/>
 </div>
 
@@ -50,8 +50,8 @@ have included sophisticated electrical and HVAC systems.
 </div>
 
 <div>
-<div class="left-pics">
-    <img class="fadein" src="http://brytex.com/wp-content/uploads/2016/02/brytex-011-edited.jpg">
+<div class="row row-cols-1 row-cols-md-2 row-cols-xl-1 float-xl-start me-xl-im w-xl-im justify-content-center">
+    <img class="fadein p-0 pb-1n4 pe-md-5n8 px-lg-0 col" src="http://brytex.com/wp-content/uploads/2016/02/brytex-011-edited.jpg">
     <br/>
 </div>
 
@@ -72,8 +72,8 @@ steel bracing providing maximum space.
 </div>
 
 <div>
-<div class="left-pics">
-    <img class="fadein" src="http://brytex.com/wp-content/uploads/2016/01/Products_CustomFabrication.jpg">
+<div class="row row-cols-1 row-cols-md-2 row-cols-xl-1 float-xl-start me-xl-im w-xl-im justify-content-center">
+    <img class="fadein p-0 pb-1n4 pe-md-5n8 px-lg-0 col" src="http://brytex.com/wp-content/uploads/2016/01/Products_CustomFabrication.jpg">
     <br/>
 </div>
 
@@ -92,7 +92,7 @@ finishes.
 </div>
 
 <div>
-<div class="left-pics">&nbsp;</div>
+<div class="row row-cols-1 row-cols-md-2 row-cols-xl-1 float-xl-start me-xl-im w-xl-im justify-content-center">&nbsp;</div>
 
 <div>
 

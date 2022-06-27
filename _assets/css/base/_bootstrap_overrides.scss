@@ -18,17 +18,20 @@ $spacers: (
     "4": 1.5 * $spacer,
     "5": 3 * $spacer,
     "gut": 0.75 * $spacer,
+    "5n8": 0.625 * $spacer,
+    "1n4": 1.25 * $spacer,
     "1n8": 1.125 * $spacer,
+    "im": 4%,
 );
-
-@import "./../../../node_modules/bootstrap/scss/functions";
-@import "./../../../node_modules/bootstrap/scss/variables";
-@import "./../../../node_modules/bootstrap/scss/utilities";
 
 $smallDrop: drop-shadow(2px 2px 0px rgb(0 0 0 / 75%));
 $navHeight: 4 * $spacer;
 $logoMargin: calc((5 / 16) * $spacer);
 $imgWidth: 450px;
+
+@import "./../../../node_modules/bootstrap/scss/functions";
+@import "./../../../node_modules/bootstrap/scss/variables";
+@import "./../../../node_modules/bootstrap/scss/utilities";
 
 $utilities: map-merge(
     $utilities, (
@@ -70,6 +73,18 @@ $utilities: map-merge(
                 values: map-merge(
                     map-get(map-get($utilities, "border-bottom"), "values"),
                     ( 1: 1px dotted ),
+                ),
+                responsive: true,
+            ),
+        ),
+        "width": map-merge(
+            map-get($utilities, "width"), (
+                responsive: true,
+                values: map-merge(
+                    map-get(map-get($utilities, "width"), "values"), (
+                        "im": 450px,
+                        "33": calc(100% / 3)
+                    ),
                 ),
             ),
         ),

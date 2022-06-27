@@ -18,7 +18,7 @@
             </button>
         </div>
         <div class="collapse navbar-collapse justify-content-end navbarItems
-                    w-100 w-xl-25">
+                    w-100">
             <ul class="navbar-nav flex-column flex-xl-row text-center">
         {%- for s in sections -%}
             <li class="nav-item d-
@@ -26,7 +26,7 @@
                            none d-lg-
                        {%- endif -%}
                        flex align-items-center border-secondary border-bottom-1
-                       px-xl-gut py-1 py-xl-0 mx-1n8 m-xl-0"
+                       border-bottom-xl-0 px-xl-gut py-1 py-xl-0 mx-1n8 m-xl-0"
                 {% if forloop.last == true -%}
                     style="border: none !important;"
                 {%- endif %}
@@ -52,7 +52,7 @@
             </a>
         </div>
         <div class="collapse navbar-collapse justify-content-start navbarItems
-                    w-100 w-xl-25">
+                    w-100">
             <ul class="navbar-nav flex-column flex-xl-row text-center">
         {%- endif %}
         {%- endfor %}
