@@ -1,5 +1,5 @@
 {
-    "baseUrl": "http://brytex.com/wp-content/uploads/2016/01/",
+    "baseUrl": "./img/",
     "buildingList": [
         {
             "buildingType": "Self Framing Buildings",
