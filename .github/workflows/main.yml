@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - master
+      - auto-deploy
 
 name: 🚀 Deploy website on push
 jobs:
@@ -29,4 +30,3 @@ jobs:
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASS }}
         local-dir: ./_site/
-        dry-run: true
