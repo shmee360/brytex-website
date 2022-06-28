@@ -37,5 +37,5 @@ jobs:
         server: brytex.com
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASS }}
-        local-dir: ./site/
+        local-dir: ./_site/
         dry-run: true
