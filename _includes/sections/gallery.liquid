@@ -1,15 +1,18 @@
-<div class="galleryGrid pe-none user-select-none" data-bs-toggle="modal"
+<div class="pe-none user-select-none row row-cols-1 row-cols-md-2
+            row-cols-lg-3 row-cols-xl-4 w-100" data-bs-toggle="modal"
      data-bs-target="#galleryModal">
 {%- for b in gallery.buildingList %}
-    <div class="galleryItem slidein pe-auto" data-bs-target="#galleryCarousel"
+    <div class="galleryItem slidein pe-auto col p-0"
+         data-bs-target="#galleryCarousel"
          data-bs-slide-to="{{ forloop.index0 }}" tabindex="0"
          aria-label="{{ b.buildingType }} # {{- b.buildingIndex -}}">
-
-        <img src="{{ gallery.baseUrl -}}
-                  {{- b.buildingType | remove: " " -}}
-                  _
-                  {{- b.buildingIndex -}}
-                  .jpg"/>
+        <div style="background-image: url({{- gallery.baseUrl -}}
+                    {{- b.buildingType | remove: " " -}}
+                    _
+                    {{- b.buildingIndex -}}
+                    .jpg);"
+             class="itemImg d-block w-100 h-100 pt-3t4">
+        </div>
 
         <div class="projectInfo">{{ b.buildingType | upcase }}</div>
     </div>

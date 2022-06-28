@@ -196,6 +196,10 @@ section {
     transform: translateX(0);
 }
 
+.row [class*='col-'] {
+    transition: all 0.5s ease-in-out;
+}
+
 .content {
     padding: 3.75 * $spacer 1.25 * $spacer;
     overflow: hidden;
@@ -297,26 +301,18 @@ section {
     flex-direction: column;
     align-items: center;
     position: relative;
-    width: 400px;
-    height: 260px;
-    min-width: 25%;
-    @include media-breakpoint-down(xl) {
-        width: 33%;
-    }
-    @include media-breakpoint-down(md) {
-        width: 50%;
-    }
-    @include media-breakpoint-down(sm) {
-        width: 100%;
-    }
-    min-height: calc((100vh - $navHeight) / 3);
-    max-height: calc(100vh - $navHeight);
+    // height: calc((100vh - $navHeight) / 3) !important;
+    // min-height: calc((100vh - $navHeight) / 3) !important;
+    // max-height: calc(100vh - $navHeight) !important;
     cursor: pointer;
 
-    img {
+    .itemImg {
         height: 100%;
         transform: translateY(0);
         transition: transform 0.2s;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .projectInfo {
@@ -337,7 +333,7 @@ section {
 }
 
 .galleryItem:hover, .galleryItem:focus-visible {
-    img {
+    .itemImg {
         transform: translateY(calc($spacer - 25%));
         transition: transform 0.2s;
     }
