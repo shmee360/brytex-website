@@ -35,7 +35,7 @@
                      data-bs-interval="false" data-bs-ride="carousel">
                     <div class="carousel-inner">
                     {%- for b in gallery.buildingList %}
-                        <div class="carousel-item
+                        <div class="carousel-item position-relative
                                     {%- if forloop.first == true %} active
                                     {%- endif -%}">
                             <img class="d-block w-100"
@@ -44,6 +44,10 @@
                                       _
                                       {{- b.buildingIndex -}}
                                       .jpg"/>
+                            <p class="bg-white text-secondary bottom-0 left-0
+                                      fst-italic fw-bold">
+                                {{ b.buildingType }}
+                            </p>
                         </div>
                     {%- endfor %}
                     </div>
