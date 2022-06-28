@@ -2,7 +2,9 @@
             row-cols-lg-3 row-cols-xl-4 w-100" data-bs-toggle="modal"
      data-bs-target="#galleryModal">
 {%- for b in gallery.buildingList %}
-    <div class="galleryItem slidein pe-auto col p-0"
+    <div class="galleryItem slidein pe-auto col p-0 cur-pointer
+                position-relative d-flex flex-column align-items-center
+                overflow-hidden"
          data-bs-target="#galleryCarousel"
          data-bs-slide-to="{{ forloop.index0 }}" tabindex="0"
          aria-label="{{ b.buildingType }} # {{- b.buildingIndex -}}">
@@ -29,7 +31,7 @@
             </div>
 
             <div class="modal-body">
-                <div id="galleryCarousel" class="carousel slide carousel-dark"
+                <div id="galleryCarousel" class="carousel slide"
                      data-bs-interval="false" data-bs-ride="carousel">
                     <div class="carousel-inner">
                     {%- for b in gallery.buildingList %}

@@ -170,7 +170,9 @@ section {
 
 .parallax {
     height: 100%; 
-    background-attachment: fixed;
+    @include media-breakpoint-up(xl) {
+        background-attachment: fixed;
+    }
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -178,7 +180,9 @@ section {
 
 .fadein {
     opacity: 0;
-    transform: translateY(100px);
+    @include media-breakpoint-up(xl) {
+        transform: translateY(100px);
+    }
     transition: opacity 2s, transform 1s;
 }
 
@@ -296,16 +300,6 @@ section {
 }
 
 .galleryItem {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    // height: calc((100vh - $navHeight) / 3) !important;
-    // min-height: calc((100vh - $navHeight) / 3) !important;
-    // max-height: calc(100vh - $navHeight) !important;
-    cursor: pointer;
-
     .itemImg {
         height: 100%;
         transform: translateY(0);
