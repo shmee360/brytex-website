@@ -1,0 +1,39 @@
+on:
+  push:
+    branches:
+      - master
+
+name: 🚀 Deploy website on push
+jobs:
+  build-site:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+
+    - name: ⬢ Use Node.js 18
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'
+        
+    - name: 🧹 Clean up cache
+      run: npm run clean
+
+    - name: 🔨 Build
+      run: |
+        npm install --clean
+        npm run build
+
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    needs: build-site
+    steps:
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: brytex.com
+        username: ${{ secrets.FTP_USER }}
+        password: ${{ secrets.FTP_PASS }}
+        local-dir: ./site
+        dry-run: true
