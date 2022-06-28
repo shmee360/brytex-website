@@ -48,22 +48,22 @@ cycle from acceptance of tender to on time completion of the project.
 <div class="d-xl-none row row-cols-1 row-cols-md-2 row-cols-xl-1">
     <div class="p-0 pe-md-1n4 pe-xl-0 pb-1n4 col">
         <div class="overflow-hidden d-flex justify-content-center align-items-center">
-            <img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex_1.jpg">
+            <img src="./img/AboutBrytex_1.jpg">
         </div>
     </div>
     <div class="p-0 pb-1n4 col">
         <div class="overflow-hidden d-flex justify-content-center align-items-center">
-            <img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex_2.jpg">
+            <img src="./img/AboutBrytex_2.jpg">
         </div>
     </div>
     <div class="p-0 pb-1n4 pe-md-1n4 pe-xl-0 col">
         <div class="overflow-hidden d-flex justify-content-center align-items-center">
-            <img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex3.jpg">
+            <img src="./img/AboutBrytex3.jpg">
         </div>
     </div>
     <div class="p-0 pb-1n4 col">
         <div class="overflow-hidden d-flex justify-content-center align-items-center">
-            <img src="http://brytex.com/wp-content/uploads/2016/01/AboutBrytex4.jpg">
+            <img src="./img/AboutBrytex4.jpg">
         </div>
     </div>
 </div>
