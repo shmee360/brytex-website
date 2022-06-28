@@ -15,13 +15,15 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '18'
+
+    - name: 📦 Set up npm project
+      run: npm install --clean
         
     - name: 🧹 Clean up cache
       run: npm run clean
 
     - name: 🔨 Build
       run: |
-        npm install --clean
         npm run build
 
   web-deploy:
