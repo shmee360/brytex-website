@@ -103,5 +103,5 @@ dist
 # TernJS port file
 .tern-port
 
-# Eleventy site file
-_site
+# Eleventy site directory
+_site/

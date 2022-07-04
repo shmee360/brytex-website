@@ -1,5 +1,5 @@
 {
-    "baseUrl": "./img/",
+    "baseUrl": "./img/gallery/",
     "buildingList": [
         {
             "buildingType": "Self Framing Buildings",

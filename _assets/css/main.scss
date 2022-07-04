@@ -342,6 +342,12 @@ section {
     z-index: $zindex-dropdown;
 }
 
+#galleryCarousel {
+    .carousel-control-prev, .carousel-control-next {
+        filter: $smallDrop;
+    }
+}
+
 .smallHr { width: 3 * $spacer; }
 
 #finisher {
