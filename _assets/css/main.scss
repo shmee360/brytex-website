@@ -3,6 +3,8 @@
 @import "./base/_bootstrap_overrides.scss";
 @import "./vendor/_bootstrap.scss";
 
+p { text-align: justify }
+
 .navbar {
     .nav-item {
         @include media-breakpoint-down(xl) {
